@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Money conversion</title>
+</head>
+<body>
+   <table>
+     <tr>
+       <th>Amount</th>
+       <th>From Currency</th>
+       <th>To Currency</th>
+     </tr>
+     <tr>
+       <td><input type="number" id="Tien"></td>
+       <td>
+         <select name="" id="select1">
+           <option value="a">USD</option>
+           <option value="b">VND</option>
+         </select>
+       </td>
+       <td>
+         <select name="" id="select2">
+           <option value="b">VND</option>
+           <option value="a">USD</option>
+         </select>
+       </td>
+       <td><button onclick="Nhap()">Convert</button></td>
+     </tr>
+   </table>
+    <h4>Kết quả</h4>
+    <div id="KQ"></div>
+    <script src="Convert.js"></script>
+</body>
+</html>
