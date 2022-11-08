@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tuổi vào lớp 10</title>
+</head>
+<body>
+  <h3>Nhập số tuổi</h3>
+  <input type="number" id="Tuoi"><br><br>
+  <button onclick="result()">Kết quả</button><br><br>
+  <div id="KQ"></div>
+  <script>
+    function result() {
+      let Tuoi = document.getElementById("Tuoi").value;
+      if (Tuoi >= 15) {
+        document.getElementById("KQ").innerHTML = "Đủ tuổi vào lớp 10";
+      } else document.getElementById("KQ").innerHTML = "Không tuổi vào lớp 10";
+    }
+  </script>
+</body>
+</html>
