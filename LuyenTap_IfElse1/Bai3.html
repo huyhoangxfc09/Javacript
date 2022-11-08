@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập số nguyên so sánh với 0</title>
+</head>
+<body>
+  <h3>Nhập số nguyên:</h3>
+  <input type="number" id="number">
+  <button onclick="Result()">Kết quả</button><br>
+  <div id="KQ"></div>
+  <script>
+    function Result() {
+        let number = document.getElementById("number").value;
+        if (number >= 0) {
+            document.getElementById('KQ').innerHTML = "Số lớn hơn 0";
+        } else  document.getElementById('KQ').innerHTML = "Số nhỏ hơn 0";
+        if(number==0) {
+            document.getElementById('KQ').innerHTML = "Giá trị bằng 0";
+        }
+    }
+  </script>
+</body>
+</html>
