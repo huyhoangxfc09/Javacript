@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước viễn thông</title>
+  <style>
+    table,th{
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <h3 style="text-align: center ; width: 800px" >Cước điện thoại</h3>
+  <table>
+    <tr>
+      <th>Cước thuê bao:</th>
+      <td id="a" style="text-align: left">22000</td>
+    </tr>
+    <tr>
+      <th>Gọi nội mạng:</th>
+      <td style="width: 20%"> <input type="number" id="b" placeholder="số phút" style="width: 60px" >phút:</td>
+      <td id="noimang" style="text-align: left"></td>
+    </tr>
+    <tr>
+      <th>Gọi nội ngoại mạng:</th>
+      <td><input type="number" id="c" placeholder="số phút" style="width: 60px">phút:</td>
+      <td id="ngoaimang" style="text-align: left"></td>
+    </tr>
+    <tr>
+      <th>Dịch vụ hỗ trợ:</th>
+      <td><input type="number" id="d" placeholder="số phút" style="width: 60px">phút:</td>
+      <td id="hotro" style="text-align: left"></td>
+    </tr>
+    <tr>
+      <th>Tổng:</th>
+      <td id="sum" style="text-align: left"></td>
+    </tr>
+    <tr>
+      <td><button onclick="result()">Kiểm tra</button></td>
+    </tr>
+  </table>
+    <script src="Bai7.js"></script>
+</body>
+</html>
