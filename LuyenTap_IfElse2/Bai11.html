@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+  <script>
+    let money = +prompt("Nhập phần thu nhập tính thuế/năm");
+    let thue;
+    if (money<60){
+      thue= 0;
+      alert('Không chịu thuế thu nhập cá nhân');
+    }
+    else if (money == 60){
+      thue = (60/100)*5;
+    }else if (money<120){
+      thue = (money/100)*10;
+    }else if (money<216) {
+      thue = (money/100)*15;
+    }else if (money<384){
+      thue = (money/100)*20;
+    }else if (money<624){
+      thue = (money/100)*25;
+    }else if (money<960){
+      thue = (money/100)*30;
+    }else {
+      thue = (money/100)*35;
+    }
+    let thunhap = money - thue;
+    alert('Số tiền nộp thuế = '+thue);
+    alert('Thu nhập sau thuế= '+thunhap);
+  </script>
+</body>
+</html>
