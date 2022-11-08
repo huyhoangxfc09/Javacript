@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng</title>
+</head>
+<body>
+  <h3>Tính hoa hồng</h3>
+  <p>Nhập doanh số bán hàng</p>
+  <input type="number" id="ds" placeholder="Doanh số bán hàng"><br><br>
+  <button onclick="result()">Kiểm tra</button><br>
+  <p> Kết quả</p>
+  <div id="KQ"></div>
+  <script>
+    function result(){
+      let doanhthu = +document.getElementById('ds').value;
+      let hoahong = (doanhthu/100)*5;
+      document.getElementById('KQ').innerHTML = hoahong;
+    }
+  </script>
+</body>
+</html>
