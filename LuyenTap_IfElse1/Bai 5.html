@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+  <h2>Xếp hạng học lực</h2>
+   Điểm kiểm tra
+  <input type="number" id="a" placeholder="Điểm kiểm tra"><br><br>
+   Điểm giữa kì
+  <input type="number" id="b" placeholder="Điểm giữa kì"><br><br>
+   Điểm cuối kì
+  <input type="number" id="c" placeholder="Điểm cuối kì"><br><br>
+  <button onclick="result()">Kiểm tra</button><br>
+  <div id="KQ"></div>
+<script>
+  function result(){
+    let a = document.getElementById('a').value;
+    let b = document.getElementById('b').value;
+    let c = document.getElementById('c').value;
+    let dtb = (Number(a) +Number(b) + Number(c))/3;
+    if (dtb < 3) {
+      document.getElementById('KQ').innerHTML = dtb +'<br>'+'Xếp loại kém';
+    } else if (dtb < 5){
+      document.getElementById('KQ').innerHTML = dtb +'<br>'+'Xếp loại yếu';
+    } else if (dtb < 6.5){
+      document.getElementById('KQ').innerHTML = dtb +'<br>'+'Xếp loại trung bình';
+    } else if (dtb< 8) {
+      document.getElementById('KQ').innerHTML = dtb +'<br>'+'Xếp loại khá';
+    } else document.getElementById('KQ').innerHTML = dtb +'<br>'+'Xếp loại giỏi';
+  }
+</script>
+</body>
+</html>
