@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>20 số trong dãy fibonacci</title>
+</head>
+<body>
+<h3> 20 số đầu tiên trong dãy fibonacci</h3>
+<script>
+  const number = parseInt(prompt('Enter the number of terms: '));
+  let num1 = 0 , num2 = 1, num ;
+  for (let i =1 ; i <= number ;i++) {
+    document.write(num1 + " ; ");
+    num = num1 + num2;
+    num1 = num2;
+    num2 = num;
+    if (num1%5==0){
+      document.write(num1 + '<br>' + 'Số đầu tiên chia hết cho 5 trong dãy là:' + num1)
+      break;
+    }
+  }
+</script>
+</body>
+</html>
