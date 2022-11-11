@@ -16,7 +16,7 @@
       // HIển thị giá trị nhập:
     alert('Bình phương giá trị nhập là: '+giatri);
   </script>
-    <!-- Bài3: Nhập gái trị a,b tính S=a*b
+    <!-- Bài3: Nhập giá trị a,b tính S=a*b
       Bước 1: Tạo input a, b, đặt id'name' cho từng thẻ: -->
         <input type="number" id="a" placeholder="Nhập a">
         <input type="number" id="b" placeholder="Nhập b">
@@ -43,7 +43,7 @@
        <input id="canh"type="number" placeholder="Nhập cạnh a" >
         <p id="chuvi"></p>
         <p id="dientich"></p>
-        <button onclick="HV()">Tính</button>
+        <button onclick="HV()">Tính</button><br>
         <script>
           function HV(){
             let canh= +document.getElementById('canh').value;
@@ -99,9 +99,7 @@
             let b = +document.getElementById('canhb').value;
             let c = +document.getElementById('canhc').value;
             if ((a > 0) && (b > 0) && (c > 0)) {
-              if ((a + b > c) || (a + c > b) || (b + c.a)) {
-                document.getElementById('tamgiac').innerHTML = 'Đây là tam giác';
-              }
+
               if ((a == b) || (a == c) || (b == c)) {
                 document.getElementById('tamgiaccan').innerHTML = 'Đây là tam giác cân';
               }
@@ -111,8 +109,12 @@
               if (
                       (a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == a * a + b * b)
               ) {
-                document.getElementById('tamgiacvuong').innerHTML = 'Đây là tam giác vuông'
+                document.getElementById('tamgiacvuong').innerHTML = 'Đây là tam giác vuông';
+              }else if ((a + b > c) || (a + c > b) || (b + c.a)) {
+                document.getElementById('tamgiac').innerHTML = 'Đây là tam giác';
               }
+            }else {
+              document.getElementById('tamgiac').innerHTML = 'Đây không phải tam giác';
             }
           }
         </script>
@@ -126,8 +128,8 @@
             let a = +document.getElementById('numbera').value;
             let b = +document.getElementById('numberb').value;
             sohang = (b-a)+1;
-            sum = ((a+b)*sohang)/2;
-            document.getElementById('sum').innerHTML= 'Tổng dãy là: '+sum;
+            sum1 = ((a+b)*sohang)/2;
+            document.getElementById('sum').innerHTML= 'Tổng dãy là: '+sum1;
           }
         </script>
 
