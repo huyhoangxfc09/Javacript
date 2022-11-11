@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi kép</title>
+</head>
+<body>
+  <script>
+    let tienvay = +prompt('Nhập số tiền vay');
+      document.write('Số tiền vay ban đầu:'+tienvay + '<br>' );
+    let bandau = tienvay;
+    let laisuat = +prompt('Nhâp lãi suất cho vay');
+      document.write('Lãi suất vay: '+laisuat+ '%/tháng'+'<br>');
+    let thang = +prompt('Nhập số tháng vay');
+      document.write('Số tháng vay: '+thang+'<br>');
+    let sum = 0;
+    for (let i = 1; i<=thang; i++){
+      sum = tienvay + tienvay*(laisuat/100);
+      tienvay = sum;
+    }
+    let tientra = Math.round(tienvay);
+    let tienlai = tientra - bandau;
+    document.write('Số tiền phải trả: '+tientra+'<br>');
+    document.write('Số lãi phải trả là: '+ tienlai);
+  </script>
+</body>
+</html>
