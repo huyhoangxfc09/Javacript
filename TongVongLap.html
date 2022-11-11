@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng bằng vòng lặp</title>
+</head>
+<body>
+<input type="number" id="numbera" placeholder="Nhập số đầu">
+<input type="number" id="numberb" placeholder="Nhập số cuối">
+<button onclick="sum()">Tính tổng dãy</button>
+<p id="sum"></p>
+<script>
+    function sum(){
+        let a = +document.getElementById('numbera').value;
+        let b = +document.getElementById('numberb').value;
+        sum1 = a;
+        sohang= (b-a)+1;
+        for (i=0; i<=sohang;i++){
+            sum1+=i;
+        }
+        document.getElementById('sum').innerHTML= 'Tổng dãy là: '+sum1;
+    }
+</script>
+</body>
+</html>
