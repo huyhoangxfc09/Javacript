@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Test IF</title>
+</head>
+<body>
+  <script>
+    // Bài 1:Câu lệnh dùng để hiển thị tên trên hộp thoại là:
+    alert('Trần Huy Hoàng');
+    //Bài 2: Câu lệnh nhận giá trị từ hộp thoại sau đó bình phương giá trị nhập:
+      // Nhập giá trị từ hộp thoại:
+    let giatri = +prompt('Nhập giá trị');
+      // Bình phương giá trị:
+    giatri= Math.pow(giatri,2);
+      // HIển thị giá trị nhập:
+    alert('Bình phương giá trị nhập là: '+giatri);
+  </script>
+    <!-- Bài3: Nhập gái trị a,b tính S=a*b
+      Bước 1: Tạo input a, b, đặt id'name' cho từng thẻ: -->
+        <input type="number" id="a" placeholder="Nhập a">
+        <input type="number" id="b" placeholder="Nhập b">
+    <!--
+      Bước 2: Tạo nút tính toán để nhận tính toán từ thẻ <script> bằng onclick -->
+        <button onclick="result()">Tính toán</button>
+    <!--
+      Bước 3: Tạo thẻ h1 và đặt id cho thẻ: -->
+        <h1 id="KQ"></h1>
+    <!--
+      Bước 4: Tính toán trong thẻ <script>:
+      - Gọi giá trị từ 2 ô input
+      - Tính toán và đưa gí trị S ra thẻ h1 -->
+    <script>
+      function result(){
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let s= a*b;
+        document.getElementById('KQ').innerHTML = 'Diện tích= '+ s;
+      }
+    </script>
+    <!-- Bài 4
+      a.	Nhập vào a, hiển thị ra chu vi và diện tích của hình vuông độ dài cạnh a -->
+       <input id="canh"type="number" placeholder="Nhập cạnh a" >
+        <p id="chuvi"></p>
+        <p id="dientich"></p>
+        <button onclick="HV()">Tính</button>
+        <script>
+          function HV(){
+            let canh= +document.getElementById('canh').value;
+            C = 4*canh;
+            S = canh*canh;
+            document.getElementById('chuvi').innerHTML = 'Chu vi = '+C;
+            document.getElementById('dientich').innerHTML = 'Diện tích = '+S;
+          }
+        </script>
+      <!-- b. Nhập a, b tính a^2, a^b -->
+      <input type="number" id="numa" placeholder="Nhập a">
+      <input type="number" id="numb" placeholder="Nhập b">
+       <button onclick="tinh()">Tính</button>
+        <h3 id="ketqua1"></h3>
+        <h3 id="ketqua2"></h3>
+      <script>
+        function tinh(){
+          let numa = +document.getElementById('numa').value;
+          let numb = +document.getElementById('numb').value;
+          ketqua1 = numa*numa;
+          ketqua2 = Math.pow(numa,numb);
+          document.getElementById('ketqua1').innerHTML = 'a^2= '+ ketqua1;
+          document.getElementById('ketqua2').innerHTML = 'a^b= '+ ketqua2;
+        }
+      </script>
+      <!-- d. Nhập năm in ra thế kỷ của năm đó?? -->
+        <input type="number" id="nam" placeholder="Nhập số năm">
+        <button onclick="tt()">Tính toán</button>
+        <p id="theky"></p>
+        <script>
+          function tt(){
+            let nam = +document.getElementById('nam').value;
+            if (nam%100==0){
+              theky= nam/100;
+            }else {
+              theky = Math.floor(nam/100) + 1;
+            }
+            document.getElementById('theky').innerHTML = 'Thế kỷ: '+theky;
+          }
+        </script>
+      <!--e Nhập 3 cạnh tam giác -->
+        <input type="number" id="canha" placeholder="Nhập cạnh a">
+        <input type="number" id="canhb" placeholder="Nhập cạnh b">
+        <input type="number" id="canhc" placeholder="Nhập cạnh c">
+        <button onclick="tamgiac()">Tính toán</button>
+        <p id="tamgiac"></p>
+        <p id="tamgiacan"></p>
+        <p id="tamgiacdeu"></p>
+        <p id="tamgiacvuong"></p>
+        <script>
+          function tamgiac() {
+            let a = +document.getElementById('canha').value;
+            let b = +document.getElementById('canhb').value;
+            let c = +document.getElementById('canhc').value;
+            if ((a > 0) && (b > 0) && (c > 0)) {
+              if ((a + b > c) || (a + c > b) || (b + c.a)) {
+                document.getElementById('tamgiac').innerHTML = 'Đây là tam giác';
+              }
+              if ((a == b) || (a == c) || (b == c)) {
+                document.getElementById('tamgiaccan').innerHTML = 'Đây là tam giác cân';
+              }
+              if ((a == b) && (b == c)) {
+                document.getElementById('tamgiacdeu').innerHTML = 'Đây là tam giác đều';
+              }
+              if (
+                      (a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == a * a + b * b)
+              ) {
+                document.getElementById('tamgiacvuong').innerHTML = 'Đây là tam giác vuông'
+              }
+            }
+          }
+        </script>
+      <!-- c. Tính tổng các số từ a đến b -->
+          <input type="number" id="numbera" placeholder="Nhập số đầu">
+          <input type="number" id="numberb" placeholder="Nhập số cuối">
+          <button onclick="sum()">Tính tổng dãy</button>
+          <p id="sum"></p>
+        <script>
+          function sum(){
+            let a = +document.getElementById('numbera').value;
+            let b = +document.getElementById('numberb').value;
+            sohang = (b-a)+1;
+            sum = ((a+b)*sohang)/2;
+            document.getElementById('sum').innerHTML= 'Tổng dãy là: '+sum;
+          }
+        </script>
+
+</body>
+</html>
