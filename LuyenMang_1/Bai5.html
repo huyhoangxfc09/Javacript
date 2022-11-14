@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên âm</title>
+</head>
+<body>
+<script>
+  let array = [-8,4,6,8,-3,-84,9,-23,56,7,89,100,-5,-3,-9];
+  let count = 0;
+  for (let i=0;i<=array.length;i++){
+    let num = array[i];
+    if (num < 0) {
+      count+=1;
+    }
+  }document.write('Có tất cả '+count+' số nguyên âm');
+</script>
+</body>
+</html>
