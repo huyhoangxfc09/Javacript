@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất trong mảng</title>
+</head>
+<body>
+<script>
+  let array = [4,6,7,20,34,23,6,78,14,24];
+  let max = array[0] ;
+  let vitri = 0;
+  for (let i=1; i<=array.length;i++){
+    if (max<array[i]){
+      max = array[i];
+      vitri = i+1;
+    }
+  }document.write('Số lớn nhất là: '+max +'<br>');
+  document.write('Vị trí: '+vitri);
+</script>
+</body>
+</html>
