@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất và tính trung bình cộng của dãy</title>
+</head>
+<body>
+<script>
+  let array = [4,6,7,20,34,23,6,78,14,24];
+  let max = array[0] ;
+  let vitri = 0;
+  let sum = array[0];
+  let average = 0;
+  let n = array.length;
+  for (let i=1; i<=array.length;i++){
+    if (max<array[i]){
+      max = array[i];
+      vitri = i+1;
+      sum += array[i];
+    }
+      average = sum/n;
+  }document.write('Số lớn nhất là: '+max +'<br>');
+  document.write('Vị trí: '+ vitri+'<br>');
+  document.write('Trung bình của dãy là: '+average)
+</script>
+</body>
+</html>
