@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm kiếm và thay thế</title>
+</head>
+<body>
+<script>
+  let array = [4,6,7,20,34,23,6,78,14,24];
+  let v = prompt('Nhập số cần tìm');
+  let num = array[0];
+  for (let i = 0; i < array.length; i++) {
+    num = array[i];
+    if (num ==v){
+     array.splice(i,1);
+     array.push(0);
+    }
+  }console.log(array);
+</script>
+</body>
+</html>
