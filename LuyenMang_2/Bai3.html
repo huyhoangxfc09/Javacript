@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập mảng</title>
+</head>
+<body>
+<script>
+  let length = +prompt('Nhập kích thước của mảng');
+  let array = [];
+  document.write('Array= '+'[ ')
+  let count = 0;
+  for ( let i = 0; i< length; i++) {
+      let element = prompt('Nhập phần tử trong mảng');
+      array[i] = element;
+      document.write(element + ' , ');
+      for (let x of array[i]) {
+          if (x.charCodeAt() > 47 && x.charCodeAt() < 58) {
+              count += 1
+          }
+      }
+  }
+  document.write(' ]'+'<br>');
+  document.write(count);
+</script>
+</body>
+</html>
