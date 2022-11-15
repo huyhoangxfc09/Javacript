@@ -6,16 +6,16 @@
 </head>
 <body>
 <script>
-  let array = [4,6,7,20,34,23,6,78,14,24];
+  let array = [4,6,7,20,34,23,6,78,14,100];
   let max = array[0] ;
-  let viTri = 0;
-  for (let i=1; i<=array.length;i++){
+  let vitri = 0;
+  for (let i=1; i<array.length;i++){
     if (max<array[i]){
       max = array[i];
       vitri = i+1;
     }
   }document.write('Số lớn nhất là: '+max +'<br>');
-  document.write('Vị trí: '+viTri);
+  document.write('Vị trí: '+vitri);
 </script>
 </body>
 </html>
