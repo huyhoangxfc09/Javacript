@@ -10,11 +10,11 @@
     let sum = 0;
     for (let i = 2; i < 500; i++) {
             for (let j = 1; j <= i; j++) {
-                if (i % j == 0) {
+                if (i % j === 0) {
                     count += 1;
                 }
             }
-            if (count == 2) {
+            if (count === 2) {
                 sum+=i;
             }
             count = 0;
