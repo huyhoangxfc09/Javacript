@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các số nguyên tố trong dãy</title>
+</head>
+<body>
+<script>
+  let array = [2,5,6,12,13,14,21,23,25,46,15,42,18,24,48,59];
+  let count = 0;
+  let sum = 0;
+  let num = 0;
+  for ( let i = 0; i<array.length; i++){
+    num = array[i];
+    for ( let j= 1; j<=num;j++){
+       if (num%j ==0 ){
+         count+=1;
+       }
+    }
+    if (count==2) {
+      sum += num;
+    }
+    count = 0;
+  }
+  alert('Tổng các số nguyên tố trong dãy là: '+sum)
+</script>
+</body>
+</html>
