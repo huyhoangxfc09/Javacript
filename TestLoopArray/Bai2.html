@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số a trong dãy</title>
+</head>
+<body>
+<script>
+  let array = [23,15,23,56,48,23,48,23,45,45,56,89,23,45,15,48,89,100,99,23,15];
+  let a = +prompt('Nhập số cần tìm');
+  let count = 0;
+  for ( let i = 0; i<array.length; i++){
+    if (array[i]==a){
+      count+=1;
+    }
+  }alert('Có '+count+' số '+ a+ ' trong dãy');
+</script>
+</body>
+</html>
