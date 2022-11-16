@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In số chẵn trong mảng </title>
+</head>
+<body>
+<script>
+  let array = [1,2,8,45,78,69,42,52,15,62,23,30,15,56];
+  let evenNunber = 0;
+  let count = 0;
+  document.write('Số chẵn trong mảng là : ');
+  for (let i = 0; i<array.length; i++){
+    if ((array[i]%2) == 0){
+        evenNunber = array[i];
+      document.write(evenNunber+',');
+      count +=1;
+    }
+  }document.write('<br>'+'Số lượng số chẵn trong mảng là: '+count);
+</script>
+</body>
+</html>
