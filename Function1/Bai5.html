@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let Constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+    function find(sao) {
+        let result = "";
+        let index = 0;
+        for (let i = 0; i < star.length; i++) {
+            if ( sao===star[i]){
+                index = i;
+                for (let j= 0; j< Constellation.length;j++){
+                    if (index===j){
+                        result = star[i]+' trong chuỗi sao: '+Constellation[j];
+                        return result;
+                    }
+                }
+            }
+        }
+        for (let i = 0; i < star.length; i++){
+            if (sao!==star){
+               result = 'Không tìm thấy chuỗi sao';
+               return result;
+            }
+        }
+    }
+    let sao = prompt("Nhập vào ngôi sao: ")
+    document.write(find(sao));
+</script>
+</body>
+</html>
