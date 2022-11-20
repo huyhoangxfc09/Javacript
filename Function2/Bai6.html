@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên dương</title>
+</head>
+<body>
+<script>
+  function check(number) {
+    if (0 <= number) {
+      float = true;
+    } else {
+      float = false;
+    }
+    return float;
+  }
+  let number = +prompt('Nhập số bất kỳ');
+  document.write(number+' là số nguyên dương: '+check(number));
+</script>
+</body>
+</html>
