@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi</title>
+</head>
+<body>
+<p>Đổi từ feet sang meter</p>
+<input type="number" id="numberFoot" placeholder="Feet">
+<button onclick="feetToMeter()">Đổi</button>
+<p id="result1"></p>
+<p>Đổi từ meter sang feet</p><br>
+<input type="number" id="numberMeter" placeholder="Meter">
+<button onclick="meterToFeet()">Đổi</button>
+<p id="result2"></p>
+<script>
+  function feetToMeter(){
+    let feet = +document.getElementById('numberFoot').value;
+    let meter = 0.305*feet;
+    document.getElementById('result1').innerHTML = feet + ' feet'+' = '+meter +' meter';
+  }
+  function meterToFeet(){
+     let meter = +document.getElementById('numberMeter').value;
+     let feet = 3.279*meter;
+     document.getElementById('result2').innerHTML = meter + ' meter'+' = '+ feet+' feet';
+  }
+</script>
+</body>
+</html>
