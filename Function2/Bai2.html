@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích và chu vi hình tròn</title>
+</head>
+<body>
+<script>
+  function areaC(radius){
+    area= Math.pow(radius,2)*Pi;
+    return area;
+  }
+  function perimeterC(radius){
+    perimeter = 2*radius*Pi;
+    return perimeter;
+  }
+  const Pi= 3.14;
+  let radius = +prompt('Nhập bán kính hình tròn');
+  document.write('Chu vi hình tròn = '+perimeterC(radius)+'<br>' );
+  document.write('Diện tích hình tròn = '+areaC(radius));
+</script>
+</body>
+</html>
