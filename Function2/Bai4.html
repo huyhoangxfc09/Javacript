@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự số</title>
+</head>
+<body>
+<script>
+  let float = true;
+  function check(a){
+    if (a.charCodeAt() > 47 && a.charCodeAt() < 58) {
+       float =true;
+    }else {
+       float = false;
+    } return float;
+  }
+  let a = prompt('Nhập số a');
+  document.write(a+' là kí tự số '+ check(a))
+</script>
+</body>
+</html>
