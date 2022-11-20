@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    function reverseArray(array){
+        array.reverse().join('-')
+        return array;
+    }
+  let length= +prompt('Nhập độ dài của mảng:');
+  let array=[];
+  for (let i = 0; i<length; i++){
+          array[i] = +prompt('Nhập số thứ '+(i+1));
+  }let num = +prompt('Nhập số thêm vào mảng:');
+  array.push(num);
+  document.write(array+'<br>');
+  document.write('Mảng đảo ngược là: '+reverseArray(array));
+</script>
+</body>
+</html>
