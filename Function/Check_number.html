@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên tố</title>
+</head>
+<body>
+<script>
+    function checkPrime(number) {
+        let flag = true;
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    let number = +prompt('Nhập số cần tìm là:')
+    document.write(number+' là số nguyên tố: '+checkPrime(number));
+</script>
+</body>
+</html>
