@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra kí tự</title>
+</head>
+<body>
+<script>
+  let length= +prompt('Nhập độ dài của mảng:');
+  let array=[];
+  for (let i = 0; i<length; i++) {
+    array[i] = prompt('Nhập ký tự thứ ' + (i + 1));
+  }document.write('Mảng: '+array+'<br>');
+  function findArray(array) {
+      let a = prompt('Nhập ký tự cần tìm')
+      document.write('Ký tự cần tìm là: '+a+'<br>');
+      let count = 0;
+      for (let i = 0; i < array.length; i++) {
+          if (array[i] === a) {
+              count += 1;
+          }
+      }
+      if (count==0){
+          count=-1;
+      }
+      return count;
+  }
+  document.write('Số lần xuất hiện là: '+findArray(array));
+</script>
+</body>
+</html>
