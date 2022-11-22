@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QUản lý sản phẩm</title>
+</head>
+<style>
+    table {
+        border: 0px solid;
+        table-layout: fixed;
+        width: 300px;
+    }
+    button{
+        background-color: darkgreen ;
+        color: white;
+    }
+    td{
+        background-color: darkgray;
+        text-align: center;
+    }
+</style>
+<body onload="display()">
+<span>Name</span>
+<input type="text" id="name"><br><br>
+<button onclick="add()">Add</button>
+<p id="show"></p>
+</body>
+<script>
+  class Product{
+    constructor(name) {
+      this.name= name;
+    }
+    getName() {
+      return this.name;
+    }
+
+    setName(value) {
+      this.name = value;
+    }
+  }
+  let productArr = [];
+  function display() {
+    let result = "";
+    result += "<table>"
+    for (let i = 0; i < productArr.length; i++) {
+      result += "<tr>" +
+              "<td>" + productArr[i].getName() + "</td>" +
+              "<td ><button onclick='edit(" + i + ")'>Edit</button></td>" +
+              "<td><button onclick='deleteProd(" + i + ")'>Delete</button></td>" +
+              "</tr>"
+    }
+    result += "</table>"
+    document.getElementById("show").innerHTML = result;
+  }
+  function add(){
+    let name = document.getElementById('name').value;
+    let product = new Product(name);
+    productArr.push(product);
+    display();
+  }
+  function edit(index) {
+    let name = prompt("Input name: ")
+    let newProduct = new Product(name);
+    productArr[index] = newProduct;
+    display();
+  }
+  function deleteProd(index) {
+    productArr.splice(index, 1);
+    display()
+  }
+</script>
+</html>
