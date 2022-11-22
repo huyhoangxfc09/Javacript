@@ -1,0 +1,43 @@
+<!DOCTYPE html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(celsius ) {
+            this.celsius = celsius;
+        }
+
+        getCelsius(){
+            return this.celsius;
+        }
+
+        setCelsius(celsius){
+            this.celsius = celsius;
+        }
+
+        getKenvin(){
+            let kenvin = celsius + 273.15;
+          return kenvin;
+        }
+
+        getFahrenheit(){
+            let fahrenheit = (celsius*1.8)+32;
+            return fahrenheit;
+        }
+    }
+    let input = new Temperature();
+    input.setCelsius(32);
+    let celsius = input.getCelsius()
+    let kenvin = input.getKenvin();
+    let fahrenheit = input.getFahrenheit();
+    document.write("Độ C= "+ celsius+ '<br>');
+    document.write("Độ K = "+ kenvin+ '<br>');
+    document.write("Độ F = "+ fahrenheit);
+
+</script>
+</body>
+</html>
