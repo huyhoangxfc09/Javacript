@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body onload="display()">
+<p id="show"></p>
+
+<!--Nhập thông tin sản phẩm-->
+<span>Id: </span>
+<input type="text" id="idProd"><br/>
+<span>Name</span>
+<input type="text" id="name"><br/>
+<span>Price</span>
+<input type="text" id="price"><br/>
+<span>Description</span>
+<input type="text" id="des"><br/>
+
+<button onclick="display()">Display</button>
+<button onclick="add()">Add</button>
+<button onclick="edit()">Edit</button>
+<button onclick="deleteProd()">Delete</button>
+<div>
+  <input type="button" onclick="edit()" value="edit">
+</div>
+</body>
+<script>
+  class Product {
+    //tạo constructor
+    constructor(id, name, price, des) {
+      this.id = id;
+      this.name = name;
+      this.price = price;
+      this.des = des;
+    }
+
+    getId() {
+      return this.id;
+    }
+
+    setId(id) {
+      this.id = id;
+    }
+
+    getName() {
+      return this.name;
+    }
+
+    setName(value) {
+      this.name = value;
+    }
+
+    getPrice() {
+      return this.price;
+    }
+
+    setPrice(value) {
+      this.price = value;
+    }
+
+    getDes() {
+      return this.des;
+    }
+
+    setDes(value) {
+      this.des = value;
+    }
+  }
+
+  //tạo data mẫu
+  let iphone = new Product(1, "Iphone", 50, "New") // khởi tạo đối tưượng
+  let iphone11 = new Product(2, "Iphone11", 50, "New") // khởi tạo đối tưượng
+  let productArr = [iphone, iphone11]; // tạo mảng chứa đổi tượng
+
+  //Tạo hàm hiển thị
+  function display() {
+    let result = ""; //tạo biến lưu chuỗi HTML tạo bảng
+    //tạo tiêu đề bảng
+    result += "<table>" +
+            "<tr>" +
+            "<th>Id</th>" +
+            "<th>Name</th>" +
+            "<th>Price</th>" +
+            "<th>Desciption</th>" +
+            "<th>Action</th>" +
+            "</tr>"
+    //tạo dòng thông tin sản phẩm
+    for (let i = 0; i < productArr.length; i++) {
+      result += "<tr>" +
+              "<td>" + productArr[i].getId() + "</td>" +
+              "<td>" + productArr[i].getName() + "</td>" +
+              "<td>" + productArr[i].getPrice() + "</td>" +
+              "<td>" + productArr[i].getDes() + "</td>" +
+              "<td><button onclick='edit(" + i + ")'>Edit</button></td>" +
+              "<td><button onclick='deleteProd(" + i + ")'>Delete</button></td>" +
+              "</tr>"
+
+      // result += `<tr>
+      //                 <td>${productArr[i].getId()}</td>
+      //                 <td>${productArr[i].getName()}</td>
+      //                 <td>${productArr[i].getPrice()}</td>
+      //                 <td>${productArr[i].getDes()}</td>
+      //                 <td><button onclick='edit(${i})'>Edit</button></td>
+      //                 <td><button onclick='deleteProd(${i})'>Delete</button></td>
+      //            `
+    }
+    result += "</table>"
+    document.getElementById("show").innerHTML = result;
+  }
+
+  //thêm sản phẩm
+  function add() {
+    //lấy giá trị từ input
+    let id = document.getElementById("idProd").value;
+    let name = document.getElementById("name").value;
+    let price = document.getElementById("price").value;
+    let des = document.getElementById("des").value;
+
+    let product = new Product(id, name, price, des); //tạo đối tượng mới
+    productArr.push(product);
+    display();
+  }
+
+  function edit(index) {
+    let id = prompt("Input id:");
+    let name = prompt("Input name: ")
+    let price = prompt("Input price:");
+    let des = prompt("Input description");
+
+    let newProduct = new Product(id, name, price, des);
+    productArr[index] = newProduct;
+    display();
+  }
+
+  function deleteProd(index) {
+    productArr.splice(index, 1);
+    display()
+  }
+</script>
+</html>
