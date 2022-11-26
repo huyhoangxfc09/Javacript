@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QUản lý sản phẩm</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+    <input type="text" id="input" placeholder="New Product">
+    <button onclick="add()" style="background-color: darkgreen; color: white"  >Add</button>
+    <p id="result"></p>
+<script>
+ let array=[];
+ function display() {
+     document.getElementById("result").innerHTML = result;
+ }
+ function add() {
+     let product = document.getElementById("input").value;
+     arr.push(product);
+     display();
+ }
+
+ function edit(index) {
+     let newProduct = document.getElementById("input").value;
+     arr.splice(index, 1, newProduct);
+     display();
+ }
+</script>
+</body>
+</html>
